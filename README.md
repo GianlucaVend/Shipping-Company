@@ -143,6 +143,7 @@ _For more examples, please refer to the [Documentation](https://docs.djangoproje
 - Pointers 
 - Dynamic memory 
 - Stack vs Heap or complie time vs runtime memory 
+- Creating objects on the heap and the stack
 
 
 <!--
