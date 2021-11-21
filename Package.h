@@ -12,7 +12,7 @@ class Package
 public:
 	Package();
 	Package(string /*source*/, string /*destination*/);
-	virtual ~Package(); // destructor, called when the object is created out of existence 
+	virtual ~Package();
 	virtual double computeShipCost() const { return 0.0; }
 	string getSource() const { return *source; }
 	string getDestination() const { return *destination; }
@@ -45,4 +45,3 @@ public:
 private:
 	int weight;
 };
-

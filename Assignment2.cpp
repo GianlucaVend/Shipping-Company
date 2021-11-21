@@ -2,8 +2,8 @@
 
 //By: Gianluca Venditti
 //Date: November 22nd 2021
-//Client Code
-//Purpose: To write a program for a shipping company that delivers boxes and letters to its customers.
+//Client code
+//Purpose: The purpose of this project was to design and implement classes for a shipping company that delivers boxes and letters to its customers.
 
 void show(const Package* objectOne);
 
@@ -67,6 +67,13 @@ void show(const Package* objectOne)
 }
 
 /*
+Please enter source:
+Mail
+Please enter destination:
+Kingston
+Please enter weight:
+34
+
 Creating objects on the Stack
 
 Source for PackageOne is Mail
@@ -113,4 +120,5 @@ Shipping Cost: 1.35
 Shipping Cost: 1.35
 
 Press any key to continue . . .
+
 */

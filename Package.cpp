@@ -17,16 +17,16 @@ Package::Package()
 
 	while (source->length() == 0)
 	{
-		cout << "Error! Pleae enter a vaild source: ";
+		cout << "Error! Please enter a valid source: ";
 		getline(cin, *source);
 	}
 
 	cout << "Please enter destination: " << endl;
-	cin >> *destination;
+	getline(cin, *destination);
 
 	while (destination->length() == 0)
 	{
-		cout << "Error! Pleae enter a vaild destination: ";
+		cout << "Error! Please enter a valid destination: ";
 		getline(cin, *destination);
 	}
 }
@@ -52,13 +52,14 @@ Box::Box() : Package()
 	cout << "Please enter weight: " << endl; 
 	cin >> weight; 
 
-	while (weight <= 0 || weight >=200 || cin.fail())
+	while (cin.fail() || weight <= 0 || weight >=200)
 	{
 		cin.clear();
 		cin.ignore(80, '\n');
 		cout << "Error! Please enter a range between 0 and 200: " << endl;
 		cin >> weight; 
 	}
+	cin.ignore(80, '\n');
 }
 
 Box::Box(int newWeight, string newSource, string newDestination) :Package(newSource, newDestination)
@@ -91,13 +92,14 @@ Letter::Letter() : Package()
 	cout << "Please enter number of pages: " << endl;
 	cin >> noPages;
 
-	while (noPages < 0 || noPages > 50 || cin.fail())
+	while (cin.fail() || noPages < 0 || noPages > 50)
 	{
 		cin.clear();
 		cin.ignore(80, '\n');
 		cout << "Error! Please enter a range between 0 and 50: " << endl;
 		cin >> noPages;
 	}
+	cin.ignore(80, '\n');
 }
 
 Letter::Letter(int newNoPages, string newSource, string newDestination) : Package(newSource, newDestination)
